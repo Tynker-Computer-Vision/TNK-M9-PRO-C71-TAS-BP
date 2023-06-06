@@ -51,6 +51,9 @@ while True:
 
                         # Set isImageSelected flag variable to true to show that image can be dragged now
 
+
+            # Print the menuChoice and isImageSelected to check whether a filter selected or not
+
     except Exception as e:
         print(e)
 
