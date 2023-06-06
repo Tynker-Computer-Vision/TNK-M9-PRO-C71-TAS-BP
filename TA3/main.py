@@ -21,9 +21,8 @@ for pathImg in pathList:
 menuCount = len(menuImages)
 
 detector = HandDetector(detectionCon=0.8)
-menuChoice = -1
 
-# Flag variable to show if we are dragging an image or mot
+# Flag variable for item selected from the filters menu
 
 
 while True:
@@ -45,18 +44,9 @@ while True:
             indexFingerTop = lmList1[8]
             indexFingerBottom = lmList1[6]
 
-            if (indexFingerTop[1] < xIncrement):
-                i = 0
-                while (xIncrement*i <= wWidth):
-                    if (indexFingerTop[0] < xIncrement*i):
-                        menuChoice = i-1
-                        isImageSelected = True
-                        break
-                    i = i+1
+            # Find which image is selected by the pointer finger
 
-            # Stop dragging
-
-        # Drag the selected image
+                        # Set isImageSelected flag variable to true to show that image can be dragged now
 
     except Exception as e:
         print(e)
